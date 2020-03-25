@@ -1,0 +1,164 @@
+$cen-global-background-color:rgb(0,137,197); 
+$cem-global-fonts: Arial, Helvetica, sans-serif;
+$cem-button-color: #ffcb05;
+$cem-button-border-radius: 22px; 
+$cem-button-font-color: #7d4e04;
+
+$cem-button-font-size:1em;
+
+
+.global-style {
+    font-family: $cem-global-fonts;
+    background-color: $cen-global-background-color;
+}
+
+.button {
+    background-color:$cem-button-color !important;
+    border-radius: $cem-button-border-radius;
+    color: $cem-button-font-color;
+    font-size: $cem-button-font-size;
+    padding: 8px 32px 8px 32px;
+
+    &:hover {
+        background-color: #a9ca00 !important;
+        color: #9d4e00;
+        cursor: pointer;
+    }
+}
+
+.startup {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%) translateX(50%);    
+    margin: 32px;
+
+    &--text {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    &--content {
+        width: 100%;
+        margin-top: 48px;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+    }
+
+    &--image{
+        height: 100%;
+        width: 100%;
+    
+        &__container {
+            margin: auto;
+            width: 30%;
+        }
+    }
+
+    &--button {
+        text-decoration: none;
+    }
+}
+
+
+.playerNameAndTopScores {
+
+    &--container {
+        margin: auto;
+        top: 10%;
+        width: 100%;
+        position:absolute;
+    }
+
+    &--buttonContainer {
+        width: 100%;
+        margin: auto;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    &--clickableText {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $cem-button-color !important;
+        font-size: 1.5em;
+
+        &:hover {
+            cursor: pointer;
+            text-shadow: 2px 2px black;
+        }
+    }
+
+    &--name {
+        font-weight: bold;
+        font-size: 3em;
+        text-align: center;
+    
+        &__caption {
+            font-weight: normal;
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+
+    &--leaderboardsContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    &--leaderboardContainer {
+        flex-grow: 1;
+        flex-basis: auto;
+    }
+}
+
+.leaderboard {
+    &--grid {
+        &__container {
+            display: grid;   
+            grid-template-columns: 60% 40%;
+            grid-template-rows: auto;
+            grid-template-areas: "header header" "name score";
+            justify-items: stretch;
+            border: 1px solid black;
+            font-size: 0.90em;
+            padding-bottom: 0px;
+            width: 250px;
+            margin: 8px;
+        }
+
+        &__heading {
+            grid-column-start: 1;
+            grid-column-end: 3; 
+            text-align: left;
+            color: white;
+            background-color: black;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 4px;
+        }
+
+        &__item {
+            background-color: grey;
+            padding-top: 4px;
+            padding-left: 4px;
+            padding-bottom: 4px;
+
+            &-name {
+                grid-column-start: 1;
+                grid-column-end: 2; 
+            }
+
+            &-score {
+                grid-column-start: 2;
+                grid-column-end: 3; 
+                text-align: left;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,2 @@
+mongo cengageDbSetup.js
+pause
